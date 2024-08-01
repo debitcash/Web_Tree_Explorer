@@ -32,5 +32,5 @@ Overall, this project offers a powerful SEO tool for analyzing website structure
 > Even though the complexity of DFS is $O(E)$, where $E$ is the number of edges, the number of nodes in the tree can grow exponentially as $n^d$, where $n$ is the branching factor and $d$ is the depth. Thus, setting a depth limit is crucial to manage the exponential growth of nodes and prevent excessive computation time. While this may be manageable for small websites, it can lead to significant performance issues for larger sites. Therefore, in this implementation, the search is limited to 30 minutes to manage performance.
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/debitcash/Trading-robot/master/Results.png">
+<img src="https://raw.githubusercontent.com/debitcash/Trading-robot/master/Screenshots.png>
 </div>
