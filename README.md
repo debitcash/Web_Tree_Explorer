@@ -7,7 +7,7 @@ Key Features:
 - Employs a depth-first search algorithm to explore and analyze website structure.
 - Extracts relevant information such as phone numbers, emails, images, and PDFs.
 - Presents extracted data in a hierarchical format for easy analysis.
-  - Stores analysis results in a database for future reference.
+- Stores analysis results in a database for future reference.
 
 Technologies Used:
 
@@ -27,3 +27,10 @@ Data Access Layer: Handles database interactions using JPA.
 Persistence Layer: Defines entities and their mapping to database tables.
 
 Overall, this project offers a powerful SEO tool for analyzing website structure and identifying optimization opportunities. By visualizing URL hierarchies, users can quickly uncover internal linking issues, improve site navigation, and enhance search engine visibility.
+
+>[!CAUTION]
+> Even though the complexity of DFS is $O(E)$, where $E$ is the number of edges, the number of nodes in the tree can grow exponentially as $n^d$, where $n$ is the branching factor and $d$ is the depth. Thus, setting a depth limit is crucial to manage the exponential growth of nodes and prevent excessive computation time. While this may be manageable for small websites, it can lead to significant performance issues for larger sites. Therefore, in this implementation, the search is limited to 30 minutes to manage performance.
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/debitcash/Trading-robot/master/Results.png">
+</div>
