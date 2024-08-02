@@ -18,7 +18,7 @@ Technologies Used:
 - **Jsoup**: Parses HTML content for data extraction.
 - **Apache OpenJPA**: Implements the JPA specification.
 - **PrimeFaces**: Enhances the user interface with components.
-- **MySQL**: Database for storing analysis results.
+- **MySQL**: Stores analysis results.
 
 Project Structure:
 
