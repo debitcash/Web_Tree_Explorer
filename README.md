@@ -1,4 +1,4 @@
-### Web scraping tool
+### The web scraping tool
 
 This project is a Java-based web application designed to extract and analyze information from websites. It leverages JSF for the user interface, JPA for data persistence, and Jsoup for web scraping.
 
