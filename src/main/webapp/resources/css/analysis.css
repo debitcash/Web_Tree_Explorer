@@ -1,0 +1,38 @@
+.generalContainer {
+  margin-top: 50px;
+  width: 80%;
+  font-family: 'Lexend Deca', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding-left: 5px;
+  max-width: 1000px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lexend Deca', Helvetica, Arial;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.hiddenCheckbox {
+  display: none;
+}
+
+.hiddenTable {
+  display: none;
+}
+
+.hiddenCheckbox:checked + .hiddenTable {
+  display: table;
+}
+

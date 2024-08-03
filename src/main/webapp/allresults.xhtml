@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:p="http://primefaces.org/ui">
+<ui:composition template="template.xhtml">
+  <ui:define name="head">
+    <link rel="stylesheet" href="resources/css/allresults.css" type="text/css"/> 
+   </ui:define>
+    <ui:define name="mainInfo">  
+    <div class="mainInfo">
+      <p:dataTable value="#{urlListBean.getUrls()}" var="url">
+        <p:column headerText="Home link" styleClass="linkColumn">
+          <h:outputText value="#{url.name}"/>
+        </p:column>
+        <p:column headerText="Depth" styleClass="depthColumn">
+          <h:outputText value="#{url.depth}"/>
+        </p:column>			
+        <p:column headerText="Path" styleClass="pathColumn">
+          <ui:repeat value="#{url.pathArray}" var="item">
+            <h:outputText value="#{item}"/>
+            <br/>
+          </ui:repeat>
+        </p:column>
+      </p:dataTable> 
+    </div>
+  </ui:define>
+</ui:composition>
+</html>

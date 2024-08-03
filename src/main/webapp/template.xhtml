@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+  <h:head>
+    <title><ui:insert name="title">Default Title</ui:insert></title>
+    <link rel="stylesheet" type="text/css" href="resources/css/template.css"/> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&amp;display=swap"/>
+    <ui:insert name="head"/>
+  </h:head>
+  <body>
+    <div class="mainContainer">
+      <div class="buttons">
+        <a href="/TreeSite/home.xhtml" class="navButton">Home</a>
+        <a href="/TreeSite/about.xhtml" class="navButton" >About</a>
+        <a href="/TreeSite/allresults.xhtml" class="navButton">DB</a>
+      </div>
+        <ui:insert name="mainInfo">This is the default header</ui:insert> 
+    </div>
+  </body>
+</html>
+
+

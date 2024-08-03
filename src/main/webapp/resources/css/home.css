@@ -1,0 +1,47 @@
+.form {
+  width: 60%;
+  margin-top: 30vh;	
+}
+
+.inputUrl {
+  font-size: 30px;
+  width: 100%;
+}
+
+.parameterContainer {
+  display: flex; 
+  color: #4D4D4D;
+  padding: 7px;
+}
+
+.submitButton {
+  margin-left: auto;
+  font-size: 20px;
+  border-radius: 45px;
+  background-color: #FF9999;
+  border: none;
+  height: 35px;  	
+}
+
+.hiddenParameters {
+  display: none;
+}
+
+#toggle:checked ~ .hiddenParameters {
+  display: flex;
+  flex-direction: column; 
+  gap: 5px;
+}
+
+input {
+  padding-left: 7px;
+  border-radius: 45px;
+  font-family: 'Lexend Deca', Helvetica, Arial, sans-serif;
+  border: none;
+  font-size: 16px;
+}
+
+.progressTracker {
+  margin-left: 7px;
+  text-decoration: underline;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<ui:composition template="template.xhtml">
+  <ui:define name="head">
+    <link rel="stylesheet" href="resources/css/about.css" type="text/css"/>
+  </ui:define>
+  <ui:define name="mainInfo">
+    <div class="mainContainerAbout">
+      <p>This website provides the ability to analyze a given URL by generating a representation of the website's tree structure, identifying emails, phone numbers, and clickable pictures contained within the site. The analysis algorithm uses depth-first traversal.</p>
+      <p>You can customize the analysis by providing the following information:</p>
+      <ul>
+        <li>URL to be analyzed: The website address you want to analyze.</li>
+        <li>Tree depth limit: Stops the analysis when a certain tree depth is reached.</li>
+        <li>Excluded URL: URL to be ignored during the analysis.</li>
+      </ul>
+      <p>After analysis, the URLs are displayed in the following manner: degree(space)url(___)number of unique children among neighbours.</p>
+      <div class="textPicture">
+        <p>
+          Let's have a look at the following tree. It has 9 nodes, 3 levels, 5 parents, and 4 leaves. Here, nodes represent the unique references within the portal, 
+          so we can’t reach the URL in node 3 without going through 5 → 2 → 4. Our model will start by identifying all the children of node 5. Then it 
+          will look for their unique children at a certain level. For example, URL 2 has nodes 1 and 4 as unique at this level compared to other neighbors.
+         The algorithm will recursively repeat this step until there are no unvisited nodes left, following the depth-first traversal algorithm. Bear in mind, 
+          if nodes 6 and 2 both have a child with the same URL, it will be displayed as the unique child of node 2 due to the nature of the depth-first traversal approach.
+        </p>
+        <h:graphicImage value="resources/images/top.png" width="30%"/>
+      </div>
+      <div class="textPicture">
+        <p>
+          After traversing, the algorithm produces two maps: the first contains all children for every URL on the website, and the second contains children that are 
+          unique to each given neighbor. Using the latter map, we recursively display the URLs and their unique children. We visually represent the URLs with text and 
+          place the unique children in tables drawn underneath each parent, forming a hierarchical table layout as shown in the following picture. The table layout makes it easy 
+          to understand which nodes have which children, grandchildren, etc. It also clearly shows where the URL imbalances are occurring.<br/>
+          In the provided example, we will get an output of two tables representing the two direct unique children of the homepage, i.e., URL node 2 and node 6. Node 2 has 
+          nodes 1 and 4 as direct children, where node 4 has node 3 as its child. In turn, node 6 has only one direct unique child, node 8, which has two children, nodes 7 and 9.
+        </p>
+        <h:graphicImage value="resources/images/bottom.png" width="30%"/>
+      </div>
+    </div>
+  </ui:define>
+</ui:composition>
+</html>

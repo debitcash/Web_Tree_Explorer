@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:custom="http://example.com/custom">
+<ui:composition template="template.xhtml">
+  <ui:define name="head">
+    <link rel="stylesheet" href="resources/css/analysis.css" type="text/css"/>
+  </ui:define>
+  <ui:define name="mainInfo">  
+    <div class="generalContainer">
+      <h1>Analysis results</h1>
+      <custom:showChildren firstValue="#{logicBean.provideSortedUniqueChildrenForUrl(logicBean.homeLink)}" secondValue="#{logicBean.allUniqueChildren}" thirdValue="#{logicBean.allDirectChildren}"/>
+      <h3>Longest unique URL chain</h3>
+      <ui:repeat value="#{logicBean.maxDepthArray}" var="depthLink">
+        <h:outputText value="&#8595;#{depthLink}"/><br/>	
+      </ui:repeat>
+      <h3>Phones</h3>
+      <ui:repeat value="#{logicBean.phones}" var="item">
+        <h:outputText value="#{item}"/><br/>	
+      </ui:repeat>
+      <h3>Emails</h3>
+      <ui:repeat value="#{logicBean.emails}" var="item">
+        <h:outputText value="#{item}"/><br/>	
+      </ui:repeat>
+      <h3>Href pictures</h3>
+      <ui:repeat value="#{logicBean.pictures}" var="item">
+        <h:outputText value="#{item}"/><br/>	
+      </ui:repeat>
+      <h3>PDFs</h3>
+      <ui:repeat value="#{logicBean.pdfs}" var="item">
+        <h:outputText value="#{item}"/><br/>	
+        <h:outputText value="32124124124"/>
+      </ui:repeat>
+    </div>
+  </ui:define>
+</ui:composition>
+</html>

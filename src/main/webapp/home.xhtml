@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+  xmlns:p="http://primefaces.org/ui">
+<ui:composition template="template.xhtml">
+  <ui:define name="head">
+    <link rel="stylesheet" type="text/css" href="resources/css/home.css"/>
+    <h:outputScript name="js/formValidation.js"/>
+  </ui:define>
+  <ui:define name="mainInfo">
+    <h:form id="formId" styleClass="form">
+      <h:inputText id="inputUrl" styleClass="inputUrl" value="#{infoBean.infoHomeLink}" a:placeholder="Enter website url: https://tkemlups.ca" required="required" />
+      <div class="parameterContainer" >
+        <div class="parameters"> 
+          <label for="toggle">Parameters (optional)▼</label>
+          <input type="checkbox" id="toggle" style="display:none;"/>
+          <div class="hiddenParameters">    
+            <h:inputText type="text" id="passedRows" value="#{infoBean.infoRowLimit}" a:placeholder="Tree depth limit: 1..5"/>
+            <h:inputText type="text" id="passedLimitUrl" value="#{infoBean.infoLinkLimit}" a:placeholder="Excluded URL"/>
+          </div>
+        </div>
+        <h:commandButton value="Analyse" action="#{infoBean.redirect}" styleClass="submitButton" onclick="return validateForm();" type="submit"/>
+      </div>  
+      <p:poll interval="1" update="name" listener="#{infoBean.updateMessage}" autoStart="false" widgetVar="poll"/> 
+      <h:outputText id="name"  value="#{infoBean.progressMessage}" styleClass="progressTracker"/> 
+    </h:form>  
+  </ui:define>
+</ui:composition>
+</html>
