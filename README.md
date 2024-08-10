@@ -10,7 +10,6 @@ Key Features:
 - Stores analysis results in a database for future reference.
 
 Technologies Used:
-
 - **Java**: Core programming language.
 - **Jakarta EE**: Provides the platform for web application development.
 - **JSF**: Builds the user interface.
