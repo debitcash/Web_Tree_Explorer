@@ -33,5 +33,9 @@ Overall, this project offers a powerful SEO tool for analyzing website structure
 
 <br>
 <div align="center">
-<img src="WebScreenshots.png">
+<img src="runDisplay.gif">
+</div>
+<br>
+<div align="center">
+<img src="treeDisplay.png">
 </div>
