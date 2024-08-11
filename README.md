@@ -37,5 +37,5 @@ Overall, this project offers a powerful SEO tool for analyzing website structure
 </div>
 <br>
 <div align="center">
-<img src="treeStructure.png">
+<img src="treeStructure.png" width="600">
 </div>
