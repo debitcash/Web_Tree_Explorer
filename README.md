@@ -16,7 +16,7 @@ Technologies Used:
 - **JPA**: Manages data persistence.
 - **Jsoup**: Parses HTML content for data extraction.
 - **Apache OpenJPA**: Implements the JPA specification.
-- **PrimeFaces**: Enhances the user interface with components.
+- **PrimeFaces, PF Ajax**: Enhances the user interface with components, uses Ajax functionality to display progress.
 - **MySQL**: Stores analysis results.
 
 Project Structure:
