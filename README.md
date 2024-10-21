@@ -4,7 +4,7 @@ This project is a Java-based web application designed to extract and analyze inf
 
 Key Features:
 - Provides an intuitive web interface for users to input target URLs and parameters.
-- Employs a depth-first search algorithm to explore and analyze website structure.
+- Employs a depth-first search algorithm to explore and analyze website structure find url lops, longest url paths
 - Extracts relevant information such as phone numbers, emails, images, and PDFs.
 - Presents extracted data in a hierarchical format for easy analysis.
 - Stores analysis results in a database for future reference.
